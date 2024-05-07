@@ -13,12 +13,23 @@ public class CoreCompetency {
         nextId++;
     }
 
-    public CoreCompetency(String value) {
+    public CoreCompetency(String aCompetency) {
         this();
-        this.value = value;
+        this.value = aCompetency;
     }
 
-    // Custom toString, equals, and hashCode methods:
+    public int getId() {
+        return id;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+// Custom toString, equals, and hashCode methods:
 
     @Override
     public String toString() {
