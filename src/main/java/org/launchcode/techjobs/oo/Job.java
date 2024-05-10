@@ -92,4 +92,42 @@ public class Job {
     public int hashCode() {
         return Objects.hashCode(id);
     }
+
+    @Override
+    public String toString() {
+        String newLine = System.lineSeparator();
+        String outputString = newLine + "ID: " + this.id + newLine;
+        if (this.name == null || this.name.isEmpty()) {
+            outputString += "Name: Data not available" + newLine;
+        }
+        else {
+            outputString += "Name: " + this.name + newLine;
+        }
+        if (this.employer.toString() == null || this.employer.toString().isEmpty()) {
+            outputString += "Employer: Data not available" + newLine;
+        }
+        else {
+            outputString += "Employer: " + this.employer + newLine;
+        }
+        if (this.location.toString() == null || this.location.toString().isEmpty()) {
+            outputString += "Location: Data not available" + newLine;
+        }
+        else {
+            outputString += "Location: " + this.location + newLine;
+        }
+        if (this.positionType.toString() == null || this.positionType.toString().isEmpty()) {
+            outputString += "Position Type: Data not available" + newLine;
+        }
+        else {
+            outputString += "Position Type: " + this.positionType + newLine;
+        }
+        if (this.coreCompetency.toString() == null || this.coreCompetency.toString().isEmpty()) {
+            outputString += "Core Competency: Data not available" + newLine;
+        }
+        else {
+            outputString += "Core Competency: " + this.coreCompetency + newLine;
+        }
+
+        return outputString;
+    }
 }
