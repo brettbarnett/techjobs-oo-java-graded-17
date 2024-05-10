@@ -1,6 +1,7 @@
 package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
+import static java.lang.System.lineSeparator;
 
 public class Job {
 
@@ -95,38 +96,42 @@ public class Job {
 
     @Override
     public String toString() {
-        String newLine = System.lineSeparator();
-        String outputString = newLine + "ID: " + this.id + newLine;
+        String outputString = lineSeparator() + "ID: " + this.id + lineSeparator();
         if (this.name == null || this.name.isEmpty()) {
-            outputString += "Name: Data not available" + newLine;
+            outputString += "Name: Data not available";
         }
         else {
-            outputString += "Name: " + this.name + newLine;
+            outputString += "Name: " + this.name;
         }
+        outputString += lineSeparator();
         if (this.employer.toString() == null || this.employer.toString().isEmpty()) {
-            outputString += "Employer: Data not available" + newLine;
+            outputString += "Employer: Data not available";
         }
         else {
-            outputString += "Employer: " + this.employer + newLine;
+            outputString += "Employer: " + this.employer;
         }
+        outputString += lineSeparator();
         if (this.location.toString() == null || this.location.toString().isEmpty()) {
-            outputString += "Location: Data not available" + newLine;
+            outputString += "Location: Data not available";
         }
         else {
-            outputString += "Location: " + this.location + newLine;
+            outputString += "Location: " + this.location;
         }
+        outputString += lineSeparator();
         if (this.positionType.toString() == null || this.positionType.toString().isEmpty()) {
-            outputString += "Position Type: Data not available" + newLine;
+            outputString += "Position Type: Data not available";
         }
         else {
-            outputString += "Position Type: " + this.positionType + newLine;
+            outputString += "Position Type: " + this.positionType;
         }
+        outputString += lineSeparator();
         if (this.coreCompetency.toString() == null || this.coreCompetency.toString().isEmpty()) {
-            outputString += "Core Competency: Data not available" + newLine;
+            outputString += "Core Competency: Data not available";
         }
         else {
-            outputString += "Core Competency: " + this.coreCompetency + newLine;
+            outputString += "Core Competency: " + this.coreCompetency;
         }
+        outputString += lineSeparator();
 
         return outputString;
     }
